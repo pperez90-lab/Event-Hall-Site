@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Booking | Soulstice Music Hall</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  </head>
+  <body>
+    <header>
+      <a href="index.html" class="logo"
+        ><span>Soulstice </span
+        ><span class="logo-highlight">Music</span> Hall</a
+      >
+      <nav>
+        <ul class="navigation">
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="events.html">Events</a></li>
+          <li><a href="booking.html">Booking</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </nav>
+      <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </header>
+    <main>
+      <section>
+        <h1>Book Your Event or Reserve Tickets</h1>
+        <form class="contactform" action="#" method="POST">
+          <h3>Send Us Your Booking Request</h3>
+          <div class="inputbox">
+            <label for="name">Your Name</label>
+            <input type="text" id="name" name="name" required />
+          </div>
+          <div class="inputbox">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required />
+          </div>
+          <div class="inputbox">
+            <label for="phone">Phone</label>
+            <input type="tel" id="phone" name="phone" />
+          </div>
+          <div class="inputbox">
+            <label for="event-type">Event Type</label>
+            <select id="event-type" name="event-type" required>
+              <option value="">Select type...</option>
+              <option value="concert">Concert</option>
+              <option value="festival">Festival</option>
+              <option value="private">Private Event</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+          <div class="inputbox">
+            <label for="details">Details/Questions</label>
+            <textarea
+              id="details"
+              name="details"
+              rows="4"
+              placeholder="Date, number of guests, special requests, etc."
+            ></textarea>
+          </div>
+          <div class="inputbox">
+            <input type="submit" value="Submit Booking" />
+          </div>
+        </form>
+      </section>
+      <section>
+        <h2>Booking Info</h2>
+        <ul>
+          <li>
+            Venue suitable for concerts, festivals, private and corporate events
+          </li>
+          <li>Discount rates for early reservations and recurring events</li>
+          <li>Contact us for special packages and group bookings</li>
+        </ul>
+        <img
+          src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=800&q=80"
+          alt="Stage lights at Soulstice Music Hall"
+          style="
+            width: 100%;
+            max-width: 570px;
+            border-radius: 14px;
+            margin-top: 24px;
+          "
+        />
+      </section>
+    </main>
+    <footer>
+      <p>
+        &copy; 2025 Soulstice Music Hall &bull; Follow us:
+        <a href="https://facebook.com/" target="_blank">Facebook</a> &bull;
+        <a href="https://instagram.com/" target="_blank">Instagram</a>
+      </p>
+    </footer>
+    <script>
+      const hamburger = document.getElementById("hamburger");
+      const nav = document.querySelector(".navigation");
+      hamburger.addEventListener("click", function () {
+        nav.classList.toggle("show");
+      });
+      document.querySelectorAll(".navigation a").forEach((link) => {
+        link.addEventListener("click", function () {
+          nav.classList.remove("show");
+        });
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Us | Soulstice Music Hall</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  </head>
+  <body>
+    <header>
+      <a href="index.html" class="logo"
+        ><span>Soulstice </span
+        ><span class="logo-highlight">Music</span> Hall</a
+      >
+      <nav>
+        <ul class="navigation">
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="events.html">Events</a></li>
+          <li><a href="booking.html">Booking</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </nav>
+      <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </header>
+
+    <main>
+      <section class="about-hero-card">
+        <img
+          src="https://cdn.pixabay.com/photo/2016/11/19/14/00/pexels-photo-182004.jpeg"
+          alt="Soulstice Music Hall Venue"
+          class="about-img-lg"
+        />
+        <div class="about-hero-text">
+          <h1 class="title-lg">About Soulstice Music Hall</h1>
+          <p class="subtitle">
+            A destination for inspiration, experience, and culture in Porto
+          </p>
+        </div>
+      </section>
+
+      <section class="about-history modern-card">
+        <h2 class="card-title">Our History</h2>
+        <p>
+          Soulstice Music Hall opened its doors in 2002, quickly becoming
+          Porto's most sought-after venue for unforgettable live events. With a
+          passion for community, we've grown from humble jazz roots to an
+          international hotspot hosting artists from all over the world.
+        </p>
+        <ul>
+          <li>Founded in Porto in 2002</li>
+          <li>Hosted first city-wide Jazz Festival in 2004</li>
+          <li>Added 400-seat outdoor space in 2012</li>
+          <li>Latest renovation completed 2025</li>
+        </ul>
+      </section>
+
+      <section class="about-mission modern-card">
+        <h2 class="card-title">Our Mission</h2>
+        <p>
+          To foster meaningful connections and creativity through world-class
+          music, cultural events, and outstanding hospitality. We believe in the
+          power of live experience to unite and inspire.
+        </p>
+      </section>
+
+      <section class="about-team modern-card">
+        <h2 class="card-title">Meet the Team</h2>
+        <div class="team-grid">
+          <article>
+            <img
+              src="https://randomuser.me/api/portraits/men/12.jpg"
+              alt="Venue Manager Peter"
+              class="team-img"
+            />
+            <h3 class="team-name">Peter Perez</h3>
+            <p class="team-role">General Manager</p>
+          </article>
+          <article>
+            <img
+              src="https://randomuser.me/api/portraits/men/34.jpg"
+              alt="Head Booker Shaun"
+              class="team-img"
+            />
+            <h3 class="team-name">Shaun Rivers</h3>
+            <p class="team-role">Head Booker</p>
+          </article>
+          <article>
+            <img
+              src="https://randomuser.me/api/portraits/women/44.jpg"
+              alt="Lead Technician Carissa"
+              class="team-img"
+            />
+            <h3 class="team-name">Carissa Smith</h3>
+            <p class="team-role">Lead Technician</p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>
+        &copy; 2025 Soulstice Music Hall &bull; Follow us:
+        <a href="https://facebook.com/" target="_blank">Facebook</a> &bull;
+        <a href="https://instagram.com/" target="_blank">Instagram</a>
+      </p>
+    </footer>
+
+    <script>
+      // Hamburger menu toggle
+      const hamburger = document.getElementById("hamburger");
+      const nav = document.querySelector(".navigation");
+      hamburger.addEventListener("click", function () {
+        nav.classList.toggle("show");
+      });
+      document.querySelectorAll(".navigation a").forEach((link) => {
+        link.addEventListener("click", function () {
+          nav.classList.remove("show");
+        });
+      });
+    </script>
+  </body>
+</html>

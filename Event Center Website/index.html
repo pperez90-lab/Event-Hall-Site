@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Soulstice Music Hall</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  </head>
+  <body>
+    <header>
+      <a href="index.html" class="logo"
+        ><span>Soulstice </span
+        ><span class="logo-highlight">Music</span> Hall</a
+      >
+      <nav>
+        <ul class="navigation">
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="events.html">Events</a></li>
+          <li><a href="booking.html">Booking</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </nav>
+      <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </header>
+    <section class="hero">
+      <div class="hero-bg"></div>
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <h1>Great music! Great Vibes!</h1>
+        <p>
+          Welcome to Soulstice Music Hall — Porto's home for unforgettable live
+          concerts, festivals, and cultural events. Immerse yourself in
+          world-class sound and dazzling light in our iconic venue.
+        </p>
+        <a href="events.html" class="hero-btn">Find out more →</a>
+      </div>
+    </section>
+    <main>
+      <section class="features">
+        <h2>Why Choose Soulstice?</h2>
+        <ul>
+          <li>State-of-the-art sound and lighting</li>
+          <li>
+            Diverse event calendar including jazz, pop, and electronic specials
+          </li>
+          <li>Lounge bar and late-night café</li>
+          <li>In the heart of Porto with easy access</li>
+        </ul>
+      </section>
+    </main>
+    <footer>
+      <p>
+        &copy; 2025 Soulstice Music Hall &bull; Follow us:
+        <a href="https://facebook.com/" target="_blank">Facebook</a> &bull;
+        <a href="https://instagram.com/" target="_blank">Instagram</a>
+      </p>
+    </footer>
+    <button id="back-to-top" title="Back to top">&#9650;</button>
+    <script>
+      // Hamburger menu
+      const hamburger = document.getElementById("hamburger");
+      const nav = document.querySelector(".navigation");
+      hamburger.addEventListener("click", function () {
+        nav.classList.toggle("show");
+      });
+      document.querySelectorAll(".navigation a").forEach((link) => {
+        link.addEventListener("click", function () {
+          nav.classList.remove("show");
+        });
+      });
+
+      // Hero background cycle
+      const images = [
+        "https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=1500&q=80",
+        "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=1500&q=80",
+        "https://images.unsplash.com/photo-1459745605009-cb474b7d2e6b?auto=format&fit=crop&w=1500&q=80",
+      ];
+      let current = 0;
+      const heroBg = document.querySelector(".hero-bg");
+      function cycleHeroBg() {
+        heroBg.style.opacity = 0;
+        setTimeout(() => {
+          heroBg.style.backgroundImage = `url('${images[current]}')`;
+          heroBg.style.opacity = 1;
+          current = (current + 1) % images.length;
+        }, 900);
+      }
+      heroBg.style.backgroundImage = `url('${images[current]}')`;
+      current = (current + 1) % images.length;
+      setInterval(cycleHeroBg, 4800);
+
+      // Back to top button
+      window.addEventListener("scroll", function () {
+        document.getElementById("back-to-top").style.display =
+          window.scrollY > 300 ? "block" : "none";
+      });
+      document.getElementById("back-to-top").onclick = function () {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      };
+    </script>
+  </body>
+</html>

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Events | Soulstice Music Hall</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  </head>
+  <body>
+    <header>
+      <a href="index.html" class="logo"
+        ><span>Soulstice </span
+        ><span class="logo-highlight">Music</span> Hall</a
+      >
+      <nav>
+        <ul class="navigation">
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="events.html">Events</a></li>
+          <li><a href="booking.html">Booking</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </nav>
+      <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </header>
+    <main>
+      <section>
+        <h1>Upcoming Events</h1>
+        <table class="event-table">
+          <caption>
+            Event Schedule
+          </caption>
+          <thead>
+            <tr>
+              <th>Date</th>
+              <th>Event</th>
+              <th>Time</th>
+              <th>Tickets</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Nov 5, 2025</td>
+              <td>Jazz Evening</td>
+              <td>7:30 pm</td>
+              <td class="tickets"><a href="booking.html">Book Now</a></td>
+            </tr>
+            <tr>
+              <td>Nov 12, 2025</td>
+              <td>Electronica Festival</td>
+              <td>9:00 pm</td>
+              <td class="tickets"><a href="booking.html">Book Now</a></td>
+            </tr>
+            <tr>
+              <td>Nov 18, 2025</td>
+              <td>Indie Rock Night</td>
+              <td>8:30 pm</td>
+              <td class="tickets"><a href="booking.html">Book Now</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+      <section>
+        <h2>Featured Events</h2>
+        <div class="agenda-grid">
+          <article class="agenda-card">
+            <div class="agenda-img-wrap">
+              <img
+                src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80"
+                alt="Jazz Evening crowd"
+                class="agenda-card-img"
+              />
+            </div>
+            <div class="agenda-card-info">
+              <div class="agenda-date">
+                <span class="agenda-day">05</span>
+                <span class="agenda-month">NOV</span>
+              </div>
+              <div class="agenda-text">
+                <h3 class="agenda-title">Jazz Evening</h3>
+                <span class="agenda-time">7:30 pm</span>
+                <p class="agenda-desc">
+                  Soulstice Quartet live, plus guest DJ in the lounge.
+                </p>
+                <a href="booking.html" class="agenda-btn">Book Now</a>
+              </div>
+            </div>
+          </article>
+          <article class="agenda-card">
+            <div class="agenda-img-wrap">
+              <img
+                src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=800&q=80"
+                alt="Electronica Festival dance floor"
+                class="agenda-card-img"
+              />
+            </div>
+            <div class="agenda-card-info">
+              <div class="agenda-date">
+                <span class="agenda-day">12</span>
+                <span class="agenda-month">NOV</span>
+              </div>
+              <div class="agenda-text">
+                <h3 class="agenda-title">Electronica Festival</h3>
+                <span class="agenda-time">9:00 pm</span>
+                <p class="agenda-desc">
+                  Experience immersive music and lighting in Soulstice’s
+                  signature style.
+                </p>
+                <a href="booking.html" class="agenda-btn">Book Now</a>
+              </div>
+            </div>
+          </article>
+          <article class="agenda-card">
+            <div class="agenda-img-wrap">
+              <img
+                src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=800&q=80"
+                alt="Indie Rock Night band"
+                class="agenda-card-img"
+              />
+            </div>
+            <div class="agenda-card-info">
+              <div class="agenda-date">
+                <span class="agenda-day">18</span>
+                <span class="agenda-month">NOV</span>
+              </div>
+              <div class="agenda-text">
+                <h3 class="agenda-title">Indie Rock Night</h3>
+                <span class="agenda-time">8:30 pm</span>
+                <p class="agenda-desc">
+                  Porto’s NovaRua headlines with local indie stars and pop-up
+                  bar menu.
+                </p>
+                <a href="booking.html" class="agenda-btn">Book Now</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <p>
+        &copy; 2025 Soulstice Music Hall &bull; Follow us:
+        <a href="https://facebook.com/" target="_blank">Facebook</a> &bull;
+        <a href="https://instagram.com/" target="_blank">Instagram</a>
+      </p>
+    </footer>
+    <script>
+      const hamburger = document.getElementById("hamburger");
+      const nav = document.querySelector(".navigation");
+      hamburger.addEventListener("click", function () {
+        nav.classList.toggle("show");
+      });
+      document.querySelectorAll(".navigation a").forEach((link) => {
+        link.addEventListener("click", function () {
+          nav.classList.remove("show");
+        });
+      });
+    </script>
+  </body>
+</html>
