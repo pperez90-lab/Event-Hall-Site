@@ -1,0 +1,285 @@
+@import url("https://fonts.googleapis.com/css2?family=Zalando+Sans+SemiExpanded:ital,wght@0,200..900;1,200..900&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Zalando Sans SemiExpanded", Arial, sans-serif;
+  background-color: #2e2e27;
+  min-height: 100vh;
+}
+
+.banner {
+  background: #181818;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  width: 100%;
+  min-width: 0;
+  padding: 0;
+  margin: 0 auto;
+  position: relative;
+  z-index: 10;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+}
+
+.navigation {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2vw;
+  height: 64px;
+  flex-wrap: wrap;
+}
+
+.left-section ul {
+  display: flex;
+  gap: 2.2rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.left-section ul a {
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  line-height: 1;
+  color: #e3e3e3;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: color 0.2s;
+}
+
+.left-section ul a:hover,
+.left-section ul a:focus {
+  color: #72c920;
+}
+
+.right-section ul {
+  display: flex;
+  gap: 1.2rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.right-section ul img {
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
+  filter: grayscale(0.3);
+  transition: filter 0.2s, transform 0.2s;
+}
+
+.right-section ul img:hover,
+.right-section ul img:focus {
+  filter: none;
+  transform: scale(1.15);
+}
+
+.profile {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 2.5rem;
+  margin: 3rem auto 2.5rem auto;
+  max-width: 1100px;
+  padding: 2rem 1rem;
+}
+
+.bio {
+  flex: 1 1 350px;
+  min-width: 260px;
+  margin: 0;
+}
+
+.bio .name {
+  font-size: 2.7rem;
+  font-weight: 800;
+  margin-bottom: 1.2rem;
+  color: #e0e0da;
+  letter-spacing: 1px;
+}
+
+.bio p {
+  font-size: 1rem;
+  line-height: 1.7;
+  margin: 0 0 2rem 0;
+  color: #bdbdb6;
+}
+
+.bio .more-info {
+  margin-top: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  padding: 1rem 2rem;
+  background: #3f8e00;
+  border: none;
+  border-radius: 6px;
+  box-shadow: 0 2px 14px 0 rgba(114, 201, 32, 0.09);
+  cursor: pointer;
+  transition: background 0.18s;
+}
+
+.bio .more-info:hover {
+  background: #72c920;
+}
+
+.bio .more-info a {
+  color: white;
+  font-weight: 700;
+  text-decoration: none;
+  font-size: 1.1rem;
+  margin-right: 0.75rem;
+  letter-spacing: 0.5px;
+}
+
+.profile-photo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 220px;
+  flex: 1 1 240px;
+}
+
+.profile-photo img {
+  width: 320px;
+  height: 320px;
+  max-width: 100%;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  border-radius: 50%;
+  background: #dedede;
+  display: block;
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.12);
+  border: 3px solid #212116;
+}
+
+.worked-with {
+  max-width: 1100px;
+  margin: 3rem auto 0 auto;
+  padding: 0 2vw;
+}
+
+.worked-with h4 {
+  color: #888;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 1.1rem;
+  letter-spacing: 1.5px;
+  margin-bottom: 1rem;
+}
+
+.companies {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 2vw 3rem 2vw;
+}
+
+.brand-logo {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.brand-logo li {
+  background: #222;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 130px;
+  min-height: 80px;
+  padding: 1rem 2rem;
+  filter: grayscale(50%) brightness(0.9);
+  box-shadow: 0 2px 14px 0 rgba(0, 0, 0, 0.08);
+  transition: filter 0.18s, box-shadow 0.2s;
+}
+
+.brand-logo li:hover,
+.brand-logo li:focus {
+  filter: none;
+  box-shadow: 0 2px 32px 0 rgba(114, 201, 32, 0.15);
+}
+
+.brand-logo img {
+  max-width: 110px;
+  max-height: 52px;
+  object-fit: contain;
+  padding: 0.25rem;
+  filter: invert(0) brightness(1);
+}
+
+@media (max-width: 900px) {
+  .profile {
+    max-width: 98vw;
+    gap: 1.5rem;
+    padding: 1.5rem 1rem;
+  }
+  .profile-photo img {
+    width: 220px;
+    height: 220px;
+  }
+}
+
+@media (max-width: 800px) {
+  .brand-logo {
+    gap: 1rem;
+    justify-content: center;
+  }
+  .companies,
+  .worked-with {
+    padding: 0 1vw 2rem 1vw;
+  }
+  .brand-logo li {
+    min-width: 80px;
+    min-height: 60px;
+    padding: 0.6rem 1rem;
+  }
+}
+
+@media (max-width: 650px) {
+  .profile {
+    flex-direction: column;
+    align-items: center;
+    max-width: 98vw;
+    padding: 1rem 0.5rem;
+    gap: 2rem;
+  }
+  .profile-photo {
+    justify-content: center;
+    margin: 0;
+  }
+  .bio {
+    align-items: center;
+    text-align: center;
+  }
+}
+
+@media (max-width: 550px) {
+  .brand-logo {
+    gap: 0.7rem;
+  }
+  .brand-logo li {
+    min-width: 77px;
+    min-height: 50px;
+    padding: 0.45rem 0.7rem;
+  }
+  .brand-logo img {
+    max-width: 70px;
+    max-height: 36px;
+  }
+}
