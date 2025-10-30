@@ -48,4 +48,4 @@ I welcome questions, opportunities, and feedback!
 
 Email: peterperez90@gmail.com
 
-Thanks for visiting my site and reviewing my work!
+Thanks for visiting my site and reviewing my work!!
